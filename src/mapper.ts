@@ -1,40 +1,52 @@
-import { cloneDeep } from "lodash"
+import { cloneDeep, create } from "lodash"
 
 type MapperFunction<TSource, TDestination> = (source: TSource) => TDestination
 
 interface AutoMapper {
-  mappings: Map<string, MapperFunction<any, any>>
   createMap<TSource, TDestination>(
-    identifier: string,
+    sourceKey: string,
+    destinationKey: string,
     mappingFunction: MapperFunction<TSource, TDestination>
   ): void
-  map<TSource, TDestination>(identifier: string, source: TSource): TDestination
+  map<TSource, TDestination>(
+    source: TSource,
+    sourceKey: string,
+    destinationKey: string
+  ): TDestination
 }
 
-export function createAutoMapper(): AutoMapper {
+function createAutoMapper(): AutoMapper {
   const mappings = new Map<string, MapperFunction<any, any>>()
 
+  function getMappingKey(sourceKey: string, destinationKey: string): string {
+    return `${sourceKey}->${destinationKey}`
+  }
+
   return {
-    mappings,
     createMap<TSource, TDestination>(
-      identifier: string,
+      sourceKey: string,
+      destinationKey: string,
       mappingFunction: MapperFunction<TSource, TDestination>
-    ) {
-      mappings.set(identifier, mappingFunction)
+    ): void {
+      const key = getMappingKey(sourceKey, destinationKey)
+      mappings.set(key, mappingFunction)
     },
 
     map<TSource, TDestination>(
-      identifier: string,
-      source: TSource
+      source: TSource,
+      sourceKey: string,
+      destinationKey: string
     ): TDestination {
-      const mapper = mappings.get(identifier) as MapperFunction<
-        TSource,
-        TDestination
-      >
+      const key = getMappingKey(sourceKey, destinationKey)
+      const mapper = mappings.get(key) as MapperFunction<TSource, TDestination>
       if (!mapper) {
-        throw new Error(`No mapping found for identifier: ${identifier}`)
+        throw new Error(`No mapping found for key: ${key}`)
       }
       return mapper(cloneDeep(source))
     },
   }
 }
+
+export { createAutoMapper }
+
+export default createAutoMapper
