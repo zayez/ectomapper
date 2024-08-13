@@ -48,5 +48,3 @@ function createAutoMapper(): AutoMapper {
 }
 
 export { createAutoMapper }
-
-export default createAutoMapper
