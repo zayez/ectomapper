@@ -15,8 +15,8 @@
   "lib": [""],
   "include": [
     "src/**/*",
-    "tests/models",
-    "tests/test.ts",
+    "test/models",
+    "test/test.ts",
     "mapper.d.ts",
     "@types/index.d.ts"
   ],
