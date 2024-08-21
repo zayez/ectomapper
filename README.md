@@ -1,5 +1,7 @@
 # ectomapper
 
+![CI](https://github.com/zayez/ectomapper/actions/workflows/ci.yml/badge.svg)
+
 A lightweight, flexible, and type-safe AutoMapper utility for TypeScript, allowing you to easily map between different object types.
 
 ## Features
@@ -22,7 +24,7 @@ npm i ectomapper
 Here’s how to create and use an AutoMapper in your TypeScript project:
 
 ```ts
-import { createAutoMapper } from "ectomapper"
+import { createAutoMapper } from 'ectomapper'
 
 // Define your source and destination types
 interface SourceType {
@@ -40,20 +42,20 @@ const autoMapper = createAutoMapper()
 
 // Define a map between SourceType and DestinationType
 autoMapper.createMap<SourceType, DestinationType>(
-  "SourceType",
-  "DestinationType",
+  'SourceType',
+  'DestinationType',
   (source) => ({
     id: source.id,
     fullName: source.name,
-  })
+  }),
 )
 
 // Use the map to transform an object
-const source: SourceType = { id: 1, name: "John Doe" }
+const source: SourceType = { id: 1, name: 'John Doe' }
 const destination = autoMapper.map<SourceType, DestinationType>(
   source,
-  "SourceType",
-  "DestinationType"
+  'SourceType',
+  'DestinationType',
 )
 
 console.log(destination) // Output: { id: 1, fullName: 'John Doe' }
@@ -75,19 +77,19 @@ interface User {
 }
 
 // Create mappings
-autoMapper.createMap<UserDTO, User>("UserDTO", "User", (source) => ({
+autoMapper.createMap<UserDTO, User>('UserDTO', 'User', (source) => ({
   id: source.userId,
   name: source.username,
 }))
 
-autoMapper.createMap<User, UserDTO>("User", "UserDTO", (source) => ({
+autoMapper.createMap<User, UserDTO>('User', 'UserDTO', (source) => ({
   userId: source.id,
   username: source.name,
 }))
 
 // Map between UserDTO and User
-const userDTO: UserDTO = { userId: 42, username: "johndoe" }
-const user = autoMapper.map<UserDTO, User>(userDTO, "UserDTO", "User")
+const userDTO: UserDTO = { userId: 42, username: 'johndoe' }
+const user = autoMapper.map<UserDTO, User>(userDTO, 'UserDTO', 'User')
 
 console.log(user) // Output: { id: 42, name: 'johndoe' }
 ```
@@ -100,8 +102,8 @@ If you attempt to map an object without a corresponding mapping, an error will b
 try {
   const unknownMapping = autoMapper.map<SourceType, DestinationType>(
     source,
-    "UnknownSource",
-    "UnknownDestination"
+    'UnknownSource',
+    'UnknownDestination',
   )
 } catch (error) {
   console.error(error.message) // Output: No mapping found for key: UnknownSource->UnknownDestination
