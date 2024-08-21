@@ -9,9 +9,16 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "typeRoots": ["./@types", "./node_modules/@types"],
     "forceConsistentCasingInFileNames": true
   },
   "lib": [""],
-  "include": ["src/**/*", "test/models", "test/test.ts"],
+  "include": [
+    "src/**/*",
+    "tests/models",
+    "tests/test.ts",
+    "mapper.d.ts",
+    "@types/index.d.ts"
+  ],
   "exclude": ["node_modules", "**/__tests__/*", "**/*.spec.ts"]
 }
