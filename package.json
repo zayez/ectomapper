@@ -12,17 +12,26 @@
   "types": "@types/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "lint": "eslint 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "glob -c \"tsx --test\" \"./test/**/*.test.ts\""
   },
   "files": [
     "dist/**/*"
   ],
   "devDependencies": {
+    "@eslint/js": "^9.9.0",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "glob": "^11.0.0",
+    "globals": "^15.9.0",
     "tsx": "^4.17.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.2.0"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"

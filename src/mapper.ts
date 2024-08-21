@@ -1,4 +1,4 @@
-import { cloneDeep } from "lodash-es"
+import { cloneDeep } from 'lodash-es'
 
 type MapperFunction<TSource, TDestination> = (source: TSource) => TDestination
 
@@ -6,12 +6,12 @@ interface AutoMapper {
   createMap<TSource, TDestination>(
     sourceKey: string,
     destinationKey: string,
-    mappingFunction: MapperFunction<TSource, TDestination>
+    mappingFunction: MapperFunction<TSource, TDestination>,
   ): void
   map<TSource, TDestination>(
     source: TSource,
     sourceKey: string,
-    destinationKey: string
+    destinationKey: string,
   ): TDestination
 }
 
@@ -26,7 +26,7 @@ const createAutoMapper = (): AutoMapper => {
     createMap<TSource, TDestination>(
       sourceKey: string,
       destinationKey: string,
-      mappingFunction: MapperFunction<TSource, TDestination>
+      mappingFunction: MapperFunction<TSource, TDestination>,
     ): void {
       const key = getMappingKey(sourceKey, destinationKey)
       mappings.set(key, mappingFunction as MapperFunction<unknown, unknown>)
@@ -35,7 +35,7 @@ const createAutoMapper = (): AutoMapper => {
     map<TSource, TDestination>(
       source: TSource,
       sourceKey: string,
-      destinationKey: string
+      destinationKey: string,
     ): TDestination {
       const key = getMappingKey(sourceKey, destinationKey)
       const mapper = mappings.get(key) as MapperFunction<TSource, TDestination>
