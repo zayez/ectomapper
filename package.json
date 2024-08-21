@@ -12,7 +12,7 @@
   "types": "@types/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "glob -c \"tsx --test\" \"./src/test/**/*.test.ts\""
+    "test": "glob -c \"tsx --test\" \"./test/**/*.test.ts\""
   },
   "files": [
     "dist/**/*"

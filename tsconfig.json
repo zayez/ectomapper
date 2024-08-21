@@ -3,6 +3,7 @@
     "module": "NodeNext",
     "target": "ESNext",
     "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
     "outDir": "dist",
     "declaration": true,
     "sourceMap": true,
@@ -13,12 +14,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "lib": [""],
-  "include": [
-    "src/**/*",
-    "test/models",
-    "test/test.ts",
-    "mapper.d.ts",
-    "@types/index.d.ts"
-  ],
-  "exclude": ["node_modules", "**/__tests__/*", "**/*.spec.ts"]
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules", "test/**/*"]
 }

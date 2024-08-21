@@ -1,9 +1,9 @@
 import test from "node:test"
 import assert from "node:assert"
 import booksJSON from "./data/books.json"
-import { createAutoMapper } from "../src/mapper"
-import { BookDTO } from "./models/library-dto"
-import { Book, Shelf } from "./models/library"
+import { createAutoMapper } from "../src/mapper.js"
+import { BookDTO } from "./models/library-dto.js"
+import { Book, Shelf } from "./models/library.js"
 
 const booksDTO = booksJSON as unknown as BookDTO[]
 
