@@ -9,7 +9,7 @@
     "automapper"
   ],
   "main": "dist/index.js",
-  "types": "@types/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",

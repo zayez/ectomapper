@@ -1,4 +1,4 @@
-import { createAutoMapper } from "../src/mapper"
+import { createAutoMapper } from './mapper'
 
 export default createAutoMapper
 
