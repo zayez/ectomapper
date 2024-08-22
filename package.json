@@ -11,7 +11,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "prebuild": "tsc --emitDeclarationOnly",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --minify --sourcemap --format=esm",
     "lint": "eslint 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "glob -c \"tsx --test\" \"./test/**/*.test.ts\""
   },
@@ -24,6 +25,7 @@
     "@types/node": "^22.4.1",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
+    "esbuild": "^0.23.1",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
