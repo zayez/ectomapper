@@ -2,7 +2,7 @@
   "name": "ectomapper",
   "type": "module",
   "author": "Enio E. Zanatta (zayez)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An automapper for TypeScript.",
   "license": "MIT",
   "keywords": [
