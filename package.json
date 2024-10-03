@@ -2,7 +2,7 @@
   "name": "ectomapper",
   "type": "module",
   "author": "Enio E. Zanatta (zayez)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight, flexible, and type-safe AutoMapper utility for TypeScript, allowing you to easily map between different object types.",
   "license": "MIT",
   "keywords": [
