@@ -3,7 +3,7 @@
   "type": "module",
   "author": "Enio E. Zanatta (zayez)",
   "version": "1.0.1",
-  "description": "An automapper for TypeScript.",
+  "description": "A lightweight, flexible, and type-safe AutoMapper utility for TypeScript, allowing you to easily map between different object types.",
   "license": "MIT",
   "keywords": [
     "automapper"
