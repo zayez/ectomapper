@@ -1,0 +1,210 @@
+[
+  {
+    "idLivro": 1,
+    "tituloLivro": "A Game of Thrones",
+    "autorLivro": {
+      "idAutor": 1,
+      "nomeAutor": "George R.R. Martin"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 1,
+      "descricaoCategoria": "Fantasy"
+    },
+    "tagLivro": [
+      {
+        "idTag": 1,
+        "nomeDescricaoTag": "fantasy"
+      },
+      {
+        "idTag": 2,
+        "nomeDescricaoTag": "politics"
+      },
+      {
+        "idTag": 3,
+        "nomeDescricaoTag": "adventure"
+      }
+    ]
+  },
+  {
+    "idLivro": 2,
+    "tituloLivro": "1984",
+    "autorLivro": {
+      "idAutor": 2,
+      "nomeAutor": "George Orwell"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 2,
+      "descricaoCategoria": "Dystopian"
+    },
+    "tagLivro": [
+      {
+        "idTag": 4,
+        "nomeDescricaoTag": "dystopia"
+      },
+      {
+        "idTag": 5,
+        "nomeDescricaoTag": "politics"
+      },
+      {
+        "idTag": 6,
+        "nomeDescricaoTag": "totalitarianism"
+      }
+    ]
+  },
+  {
+    "idLivro": 3,
+    "tituloLivro": "To Kill a Mockingbird",
+    "autorLivro": {
+      "idAutor": 3,
+      "nomeAutor": "Harper Lee"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 3,
+      "descricaoCategoria": "Fiction"
+    },
+    "tagLivro": [
+      {
+        "idTag": 7,
+        "nomeDescricaoTag": "classic"
+      },
+      {
+        "idTag": 8,
+        "nomeDescricaoTag": "racism"
+      },
+      {
+        "idTag": 9,
+        "nomeDescricaoTag": "justice"
+      }
+    ]
+  },
+  {
+    "idLivro": 4,
+    "tituloLivro": "The Catcher in the Rye",
+    "autorLivro": {
+      "idAutor": 4,
+      "nomeAutor": "J.D. Salinger"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 4,
+      "descricaoCategoria": "Fiction"
+    },
+    "tagLivro": [
+      {
+        "idTag": 10,
+        "nomeDescricaoTag": "classic"
+      },
+      {
+        "idTag": 11,
+        "nomeDescricaoTag": "coming of age"
+      },
+      {
+        "idTag": 12,
+        "nomeDescricaoTag": "alienation"
+      }
+    ]
+  },
+  {
+    "idLivro": 5,
+    "tituloLivro": "The Hobbit",
+    "autorLivro": {
+      "idAutor": 5,
+      "nomeAutor": "J.R.R. Tolkien"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 1,
+      "descricaoCategoria": "Fantasy"
+    },
+    "tagLivro": [
+      {
+        "idTag": 1,
+        "nomeDescricaoTag": "fantasy"
+      },
+      {
+        "idTag": 3,
+        "nomeDescricaoTag": "adventure"
+      },
+      {
+        "idTag": 13,
+        "nomeDescricaoTag": "mythology"
+      }
+    ]
+  },
+  {
+    "idLivro": 6,
+    "tituloLivro": "Pride and Prejudice",
+    "autorLivro": {
+      "idAutor": 6,
+      "nomeAutor": "Jane Austen"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 5,
+      "descricaoCategoria": "Romance"
+    },
+    "tagLivro": [
+      {
+        "idTag": 14,
+        "nomeDescricaoTag": "romance"
+      },
+      {
+        "idTag": 15,
+        "nomeDescricaoTag": "society"
+      },
+      {
+        "idTag": 16,
+        "nomeDescricaoTag": "class"
+      }
+    ]
+  },
+  {
+    "idLivro": 7,
+    "tituloLivro": "The Great Gatsby",
+    "autorLivro": {
+      "idAutor": 7,
+      "nomeAutor": "F. Scott Fitzgerald"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 3,
+      "descricaoCategoria": "Fiction"
+    },
+    "tagLivro": [
+      {
+        "idTag": 7,
+        "nomeDescricaoTag": "classic"
+      },
+      {
+        "idTag": 17,
+        "nomeDescricaoTag": "tragedy"
+      },
+      {
+        "idTag": 18,
+        "nomeDescricaoTag": "society"
+      }
+    ]
+  },
+  {
+    "idLivro": 8,
+    "tituloLivro": "Moby-Dick",
+    "autorLivro": {
+      "idAutor": 8,
+      "nomeAutor": "Herman Melville"
+    },
+    "categoriaDescricao": {
+      "idCategoria": 6,
+      "descricaoCategoria": "Adventure"
+    },
+    "tagLivro": [
+      {
+        "idTag": 19,
+        "nomeDescricaoTag": "adventure"
+      },
+      {
+        "idTag": 20,
+        "nomeDescricaoTag": "sea"
+      },
+      {
+        "idTag": 21,
+        "nomeDescricaoTag": "obsession"
+      }
+    ]
+  }
+]
