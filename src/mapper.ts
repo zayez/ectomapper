@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash-es'
 
 type MapperFunction<TSource, TDestination> = (source: TSource) => TDestination
 
-interface AutoMapper {
+export interface AutoMapper {
   createMap<TSource, TDestination>(
     sourceKey: string,
     destinationKey: string,
